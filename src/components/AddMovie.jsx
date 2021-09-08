@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import InputLabel from './InputLabel';
 import InputSubtitle from './InputSubtitle';
 import InputTitle from './InputTitle';
+import InputSelect from './InputSelect';
 
 export default class AddMovie extends Component {
   constructor(props) {
@@ -75,15 +76,14 @@ export default class AddMovie extends Component {
           labelTestId="rating-input-label"
           inputTestId="rating-input"
         />
-        <label htmlFor="" data-testid="genre-input-label">
-          <p>Gênero</p>
-          <select name="genre" id="" value={ genre } data-testid="genre-input" onChange={ this.changeInput }>
-            <option value="action" data-testid="genre-option">Ação</option>
-            <option value="comedy" data-testid="genre-option">Comédia</option>
-            <option value="thriller" data-testid="genre-option">Suspense</option>
-          </select>
-        </label>
-        <button data-testid="send-button" onClick={ this.initialState }>Adicionar filme</button>
+        <InputSelect value={ subtitle } onChange={ this.changeInput } />
+        <button
+          type="button"
+          data-testid="send-button"
+          onClick={ this.initialState }
+        >
+          Adicionar filme
+        </button>
       </form>
     );
   }
