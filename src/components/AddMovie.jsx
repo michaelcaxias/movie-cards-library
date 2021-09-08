@@ -3,6 +3,7 @@ import InputLabel from './InputLabel';
 import InputSubtitle from './InputSubtitle';
 import InputTitle from './InputTitle';
 import InputSelect from './InputSelect';
+import InputTextArea from './InputTextArea';
 
 export default class AddMovie extends Component {
   constructor(props) {
@@ -56,16 +57,7 @@ export default class AddMovie extends Component {
           labelTestId="image-input-label"
           inputTestId="image-input"
         />
-        <label htmlFor="textarea-storyline" data-testid="storyline-input-label">
-          <p>Sinopse</p>
-          <textarea
-            data-testid="storyline-input"
-            id="textarea-storyline"
-            name="storyline"
-            value={ storyline }
-            onChange={ this.changeInput }
-          />
-        </label>
+        <InputTextArea value={ storyline } onChange={ this.changeInput } />
         <InputLabel
           text="Avaliação"
           id="rating-input"
@@ -76,7 +68,7 @@ export default class AddMovie extends Component {
           labelTestId="rating-input-label"
           inputTestId="rating-input"
         />
-        <InputSelect value={ subtitle } onChange={ this.changeInput } />
+        <InputSelect value={ genre } onChange={ this.changeInput } />
         <button
           type="button"
           data-testid="send-button"
