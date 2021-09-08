@@ -13,15 +13,31 @@ export default class MovieLibrary extends Component {
       selectedGenre: '',
       movies,
     };
+    this.changeInput = this.changeInput.bind(this);
+  }
+
+  changeInput({ target }) {
+    const { name } = target;
+    const value = (target.type === 'checkbox') ? target.checked : target.value;
+    this.setState({
+      [name]: value,
+    });
   }
 
   render() {
     const { searchText, bookmarkedOnly, selectedGenre, movies } = this.state;
     return (
       <>
-        <SearchBar />
+        <SearchBar
+          searchText={ searchText }
+          onSearchTextChange={ this.changeInput }
+          bookmarkedOnly={ bookmarkedOnly }
+          onBookmarkedChange={ this.changeInput }
+          selectedGenre={ selectedGenre }
+          onSelectedGenreChange={ this.changeInput }
+          movies={ movies }
+        />
         <AddMovie />
-        { console.log(this.state) }
       </>
     );
   }
