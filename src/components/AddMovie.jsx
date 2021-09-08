@@ -67,6 +67,16 @@ export default class AddMovie extends Component {
             onChange={ this.changeInput }
           />
         </label>
+        <InputLabel
+          text="Avaliação"
+          id="rating-input"
+          name="rating"
+          value={ rating }
+          onChange={ this.changeInput }
+          type="number"
+          labelTestId="rating-input-label"
+          inputTestId="rating-input"
+        />
       </form>
     );
   }
