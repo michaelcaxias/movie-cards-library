@@ -6,20 +6,22 @@ import SearchBar from './SearchBar';
 export default class MovieLibrary extends Component {
   constructor(props) {
     super(props);
+    const { movies } = this.props;
     this.state = {
       searchText: '',
       bookmarkedOnly: false,
       selectedGenre: '',
-      movies: this.props.movies,
+      movies,
     };
   }
 
   render() {
-    const { movies } = this.props;
+    const { searchText, bookmarkedOnly, selectedGenre, movies } = this.state;
     return (
       <>
         <SearchBar />
         <AddMovie />
+        { console.log(this.state) }
       </>
     );
   }
