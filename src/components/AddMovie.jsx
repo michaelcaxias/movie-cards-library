@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InputLabel from './InputLabel';
+import InputSubtitle from './InputSubtitle';
 import InputTitle from './InputTitle';
 
 export default class AddMovie extends Component {
@@ -42,17 +43,8 @@ export default class AddMovie extends Component {
     const { subtitle, title, imagePath, storyline, rating, genre } = this.state;
     return (
       <form data-testid="add-movie-form">
-        <InputTitle value={ title } onChange={ this.changeInput }/>
-        <InputLabel
-          text="Subtítulo"
-          id="input-subtitle"
-          name="subtitle"
-          value={ subtitle }
-          onChange={ this.changeInput }
-          type="text"
-          labelTestId="subtitle-input-label"
-          inputTestId="subtitle-input"
-        />
+        <InputTitle value={ title } onChange={ this.changeInput } />
+        <InputSubtitle value={ subtitle } onChange={ this.changeInput } />
         <InputLabel
           text="Imagem"
           id="image-input"
