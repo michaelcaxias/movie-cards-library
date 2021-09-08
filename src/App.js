@@ -4,7 +4,6 @@ import './App.css';
 import AddMovie from './components/AddMovie';
 
 function App() {
-
   return (
     <div className="App">
       <Header />
