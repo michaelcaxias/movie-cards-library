@@ -12,7 +12,9 @@ export default class SearchBar extends Component {
     } = this.props;
 
     return (
-      <section>SearchBar</section>
+      <form data-testid="search-bar-form">
+        
+      </form>
     );
   }
 }
