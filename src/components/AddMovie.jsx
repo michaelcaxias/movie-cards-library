@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import InputLabel from './InputLabel';
 import InputSubtitle from './InputSubtitle';
 import InputTitle from './InputTitle';
 import InputSelect from './InputSelect';
 import InputTextArea from './InputTextArea';
 import InputImagePath from './InputImagePath';
+import InputRating from './InputRating';
 
 export default class AddMovie extends Component {
   constructor(props) {
@@ -23,6 +23,7 @@ export default class AddMovie extends Component {
 
   initialState() {
     const { onClick } = this.props;
+
     onClick(this.state);
     this.setState({
       subtitle: '',
@@ -42,24 +43,14 @@ export default class AddMovie extends Component {
   }
 
   render() {
-    const { onClick } = this.props;
     const { subtitle, title, imagePath, storyline, rating, genre } = this.state;
     return (
       <form data-testid="add-movie-form">
         <InputTitle value={ title } onChange={ this.changeInput } />
         <InputSubtitle value={ subtitle } onChange={ this.changeInput } />
-        <InputImagePath value={ imagePath } onChange={ this.changeInput }/>
+        <InputImagePath value={ imagePath } onChange={ this.changeInput } />
         <InputTextArea value={ storyline } onChange={ this.changeInput } />
-        <InputLabel
-          text="Avaliação"
-          id="rating-input"
-          name="rating"
-          value={ rating }
-          onChange={ this.changeInput }
-          type="number"
-          labelTestId="rating-input-label"
-          inputTestId="rating-input"
-        />
+        <InputRating value={ rating } onChange={ this.changeInput } />
         <InputSelect value={ genre } onChange={ this.changeInput } />
         <button
           type="button"
