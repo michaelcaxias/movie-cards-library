@@ -59,6 +59,16 @@ export default class AddMovie extends Component {
             onChange={ this.changeInput }
           />
         </label>
+        <label htmlFor="textarea-storyline" data-testid="storyline-input-label">
+          <p>Sinopse</p>
+          <textarea
+            data-testid="storyline-input"
+            id="textarea-storyline"
+            name="storyline"
+            value={ storyline }
+            onChange={ this.changeInput }
+          />
+        </label>
       </form>
     );
   }
