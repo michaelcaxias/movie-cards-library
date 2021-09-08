@@ -37,28 +37,26 @@ export default class AddMovie extends Component {
           labelTestId="title-input-label"
           inputTestId="title-input"
         />
-        <label htmlFor="input-subtitle" data-testid="subtitle-input-label">
-          <p>Subtítulo</p>
-          <input
-            type="text"
-            data-testid="subtitle-input"
-            id="input-subtitle"
-            name="subtitle"
-            value={ subtitle }
-            onChange={ this.changeInput }
-          />
-        </label>
-        <label htmlFor="image-input" data-testid="image-input-label">
-          <p>Imagem</p>
-          <input
-            type="text"
-            data-testid="image-input"
-            id="image-input"
-            name="imagePath"
-            value={ imagePath }
-            onChange={ this.changeInput }
-          />
-        </label>
+        <InputLabel
+          text="Subtítulo"
+          id="input-subtitle"
+          name="subtitle"
+          value={ subtitle }
+          onChange={ this.changeInput }
+          type="text"
+          labelTestId="subtitle-input-label"
+          inputTestId="subtitle-input"
+        />
+        <InputLabel
+          text="Imagem"
+          id="image-input"
+          name="imagePath"
+          value={ imagePath }
+          onChange={ this.changeInput }
+          type="text"
+          labelTestId="image-input-label"
+          inputTestId="image-input"
+        />
         <label htmlFor="textarea-storyline" data-testid="storyline-input-label">
           <p>Sinopse</p>
           <textarea
