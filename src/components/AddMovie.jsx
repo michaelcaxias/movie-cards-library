@@ -4,6 +4,7 @@ import InputSubtitle from './InputSubtitle';
 import InputTitle from './InputTitle';
 import InputSelect from './InputSelect';
 import InputTextArea from './InputTextArea';
+import InputImagePath from './InputImagePath';
 
 export default class AddMovie extends Component {
   constructor(props) {
@@ -47,16 +48,7 @@ export default class AddMovie extends Component {
       <form data-testid="add-movie-form">
         <InputTitle value={ title } onChange={ this.changeInput } />
         <InputSubtitle value={ subtitle } onChange={ this.changeInput } />
-        <InputLabel
-          text="Imagem"
-          id="image-input"
-          name="imagePath"
-          value={ imagePath }
-          onChange={ this.changeInput }
-          type="text"
-          labelTestId="image-input-label"
-          inputTestId="image-input"
-        />
+        <InputImagePath value={ imagePath } onChange={ this.changeInput }/>
         <InputTextArea value={ storyline } onChange={ this.changeInput } />
         <InputLabel
           text="Avaliação"
