@@ -10,6 +10,7 @@ export default class InputTitle extends Component {
         <input
           name="title"
           type="text"
+          className="form-control"
           id="input-text"
           value={ value }
           onChange={ onChange }

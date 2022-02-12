@@ -11,6 +11,7 @@ export default class InputSubtitle extends Component {
           name="subtitle"
           type="text"
           id="input-subtitle"
+          className="form-control"
           value={ value }
           onChange={ onChange }
           data-testid="subtitle-input"

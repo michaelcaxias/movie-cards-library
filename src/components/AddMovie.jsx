@@ -57,6 +57,7 @@ export default class AddMovie extends Component {
         <button
           type="button"
           data-testid="send-button"
+          className="btn btn-primary"
           onClick={ this.initialState }
         >
           Adicionar filme

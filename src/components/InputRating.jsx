@@ -9,6 +9,7 @@ export default class InputRating extends Component {
         <p>Avaliação</p>
         <input
           id="rating-input"
+          className="form-control"
           name="rating"
           value={ value }
           onChange={ onChange }

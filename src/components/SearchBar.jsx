@@ -20,6 +20,7 @@ export default class SearchBar extends Component {
           <p>Inclui o texto:</p>
           <input
             data-testid="text-input"
+            className="form-control"
             name="searchText"
             id="search-text"
             type="text"
@@ -33,6 +34,7 @@ export default class SearchBar extends Component {
           <select
             data-testid="select-input"
             name="selectedGenre"
+            className="form-control"
             id="select-input"
             value={ selectedGenre }
             onChange={ onSelectedGenreChange }

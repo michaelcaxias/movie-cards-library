@@ -11,6 +11,7 @@ export default class InputSelect extends Component {
           data-testid="storyline-input"
           id="textarea-storyline"
           name="storyline"
+          className="form-control"
           value={ value }
           onChange={ onChange }
         />

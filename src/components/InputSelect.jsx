@@ -12,6 +12,7 @@ export default class InputSelect extends Component {
           id="select-input"
           value={ value }
           data-testid="genre-input"
+          className="form-control"
           onChange={ onChange }
         >
           <option value="action" data-testid="genre-option">Ação</option>

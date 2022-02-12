@@ -9,6 +9,7 @@ export default class InputImagePath extends Component {
         <p>Imagem</p>
         <input
           id="image-input"
+          className="form-control"
           name="imagePath"
           value={ value }
           onChange={ onChange }
