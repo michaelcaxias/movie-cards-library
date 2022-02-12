@@ -1,27 +1,31 @@
-.add-movie-form {
-  align-items: center;
+.checkbox-input {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.search-bar-form {
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
-  margin-top: 20px;
   padding: 20px;
   background-color: #e7e7e7;
 }
 
-.add-movie-form label {
+.search-bar-form [ type = "text" ] {
   width: 100%;
 }
 
-.add-movie-form input {
+.search-bar-form label {
   width: 100%;
 }
 
-.add-movie-form textarea, select {
+.search-bar-form textarea {
   width: 100%;
 }
 
-.add-movie-form select {
+.search-bar-form select {
   width: 100%;
 }
 

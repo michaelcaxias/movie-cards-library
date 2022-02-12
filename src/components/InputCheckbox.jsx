@@ -5,7 +5,11 @@ export default class InputImagePath extends Component {
   render() {
     const { checked, onChange } = this.props;
     return (
-      <label data-testid="checkbox-input-label" htmlFor="checkbox-input">
+      <label 
+        data-testid="checkbox-input-label"
+        htmlFor="checkbox-input"
+        className="checkbox-input"
+      >
         <p>Mostrar somente favoritos</p>
         <input
           type="checkbox"

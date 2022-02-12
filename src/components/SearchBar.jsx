@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import InputCheckbox from './InputCheckbox';
+import '../SearchBar.css';
 
 export default class SearchBar extends Component {
   render() {
@@ -14,7 +15,7 @@ export default class SearchBar extends Component {
     } = this.props;
 
     return (
-      <form data-testid="search-bar-form">
+      <form data-testid="search-bar-form" className="search-bar-form">
         <label data-testid="text-input-label" htmlFor="search-text">
           <p>Inclui o texto:</p>
           <input

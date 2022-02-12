@@ -6,6 +6,7 @@ import InputSelect from './InputSelect';
 import InputTextArea from './InputTextArea';
 import InputImagePath from './InputImagePath';
 import InputRating from './InputRating';
+import '../AddMovie.css';
 
 export default class AddMovie extends Component {
   constructor(props) {
@@ -46,7 +47,7 @@ export default class AddMovie extends Component {
   render() {
     const { subtitle, title, imagePath, storyline, rating, genre } = this.state;
     return (
-      <form data-testid="add-movie-form">
+      <form data-testid="add-movie-form" className="add-movie-form">
         <InputTitle value={ title } onChange={ this.changeInput } />
         <InputSubtitle value={ subtitle } onChange={ this.changeInput } />
         <InputImagePath value={ imagePath } onChange={ this.changeInput } />
