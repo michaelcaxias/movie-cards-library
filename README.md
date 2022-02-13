@@ -7,12 +7,17 @@
 
 Projeto feito de forma individual durante o curso da [Trybe](https://www.betrybe.com/) com o objetivo de utilizar componentes React para construir uma aplicação de gerenciamento de filmes.
 
-## 🔧 Funçoes
+## ⭐ Habilidades
 
 - Utilizar as habilidades de React para a criação de componentes de classe e com de estados.
 - Utilizar o framework Bootstrap para realizar estilizações.
 
-## Como iniciar
+## 🔧 Funçoes
+
+- Criar cards de filmes
+- Filtrar filmes por categoria, genero, título e sinopse.
+
+## 💻 Como iniciar
 
 1. Faça o clone do projeto
 2. Instale as dependências
